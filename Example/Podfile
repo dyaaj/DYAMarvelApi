@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'DYAMarvelApi_Example', :exclusive => true do
+  pod "DYAMarvelApi", :path => "../"
+end
+
+target 'DYAMarvelApi_Tests', :exclusive => true do
+  pod "DYAMarvelApi", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end
