@@ -17,11 +17,11 @@ Pod::Spec.new do |s|
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/DYAMarvelApi"
+  s.homepage         = "https://github.com/dyaaj/DYAMarvelApi"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "David Yang" => "dave260888@hotmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DYAMarvelApi.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/dyaaj/DYAMarvelApi.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
@@ -34,5 +34,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'JSONModel'
 end

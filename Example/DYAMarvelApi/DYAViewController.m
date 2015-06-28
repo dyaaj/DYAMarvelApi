@@ -8,6 +8,8 @@
 
 #import "DYAViewController.h"
 
+#import <DYAMarvelApi/DYAMarvelApi.h>
+
 @interface DYAViewController ()
 
 @end
@@ -17,7 +19,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"View did load");
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    NSLog(@"View did appear");
+    
+    [[DYAMarvelApi sharedApi] setApiKey:@"6d298b0e00e01137caa456c7638884ca"];
+    [[DYAMarvelApi sharedApi] setHeaderReferer:@"developer.marvel.com"];
+    
+    [[DYAMarvelApi sharedApi] getCharacterWithId:@"1011334" success:^(DYAMarvelResponse *response) {
+        NSLog(@"success : %@", response);
+    } failure:^(NSError *error) {
+        NSLog(@"failed...");
+    }];
 }
 
 - (void)didReceiveMemoryWarning

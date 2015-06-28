@@ -1,0 +1,6 @@
+framework module DYAMarvelApi {
+  umbrella header "Pods-DYAMarvelApi_Tests-DYAMarvelApi-umbrella.h"
+
+  export *
+  module * { export * }
+}

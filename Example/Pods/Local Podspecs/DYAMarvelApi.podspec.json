@@ -1,0 +1,33 @@
+{
+  "name": "DYAMarvelApi",
+  "version": "0.1.0",
+  "summary": "A short description of DYAMarvelApi.",
+  "description": "                       An optional longer description of DYAMarvelApi\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
+  "homepage": "https://github.com/dyaaj/DYAMarvelApi",
+  "license": "MIT",
+  "authors": {
+    "David Yang": "dave260888@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/dyaaj/DYAMarvelApi.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "DYAMarvelApi": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "AFNetworking": [
+      "~> 2.3"
+    ],
+    "JSONModel": [
+
+    ]
+  }
+}
