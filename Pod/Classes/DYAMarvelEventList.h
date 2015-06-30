@@ -6,10 +6,11 @@
 //
 //
 
-#import <JSONModel/JSONModel.h>
+#import "DYAMarvelModel.h"
+
 #import "DYAMarvelEventSummary.h"
 
-@interface DYAMarvelEventList : JSONModel
+@interface DYAMarvelEventList : DYAMarvelModel
 
 @property (assign, nonatomic) NSInteger available;
 @property (assign, nonatomic) NSInteger returned;

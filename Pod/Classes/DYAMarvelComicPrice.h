@@ -6,8 +6,14 @@
 //
 //
 
-#import <DYAMarvelApi/DYAMarvelApi.h>
+#import "DYAMarvelModel.h"
+
+@protocol DYAMarvelComicPrice
+@end
 
 @interface DYAMarvelComicPrice : DYAMarvelModel
+
+@property (strong, nonatomic) NSString *type;
+@property (assign, nonatomic) float price;
 
 @end

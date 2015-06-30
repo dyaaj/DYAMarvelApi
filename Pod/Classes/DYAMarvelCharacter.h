@@ -6,7 +6,7 @@
 //
 //
 
-#import <JSONModel/JSONModel.h>
+#import "DYAMarvelModel.h"
 
 #import "DYAMarvelURL.h"
 #import "DYAMarvelImage.h"
@@ -18,7 +18,7 @@
 @protocol DYAMarvelCharacter
 @end
 
-@interface DYAMarvelCharacter : JSONModel
+@interface DYAMarvelCharacter : DYAMarvelModel
 
 @property (assign, nonatomic) NSInteger identifier;
 @property (strong, nonatomic) NSString *name;

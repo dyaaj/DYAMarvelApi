@@ -7,7 +7,10 @@
 //
 
 #import <DYAMarvelApi/DYAMarvelApi.h>
+#import "DYAMarvelComic.h"
 
 @interface DYAMarvelComicDataContainer : DYAMarvelDataContainer
+
+@property (strong, nonatomic) NSArray<DYAMarvelComic> *results;
 
 @end

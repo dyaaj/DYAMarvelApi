@@ -9,6 +9,7 @@
 #import "DYAMarvelApi.h"
 
 NSString *const DYAMarvelCharacterPath = @"/v1/public/characters/%@";
+NSString *const DYAMarvelComicsForCharacterPath = @"/v1/public/characters/%@/comics";
 
 @implementation DYAMarvelApi
 
@@ -53,6 +54,21 @@ NSString *const DYAMarvelCharacterPath = @"/v1/public/characters/%@";
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(error);
     }];
+}
+
+- (void)getComicsForCharacterWithId:(NSString *)characterId success:(void (^)(DYAMarvelResponse *))success failure:(void (^)(NSError *))failure {
+	NSString *pathString = [NSString stringWithFormat:DYAMarvelComicsForCharacterPath, characterId];
+	[self GET:pathString parameters:[self defaultParameters] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		NSError *error = nil;
+		DYAMarvelResponse *response = [[DYAMarvelResponse alloc] initWithDictionary:responseObject requestType:DYAMarvelRequestTypeComic error:&error];
+		if (error == nil) {
+			success(response);
+		} else {
+			failure(error);
+		}
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		failure(error);
+	}];
 }
 
 @end

@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, DYAMarvelRequestType) {
     DYAMarvelRequestTypeStory
 };
 
-@interface DYAMarvelResponse : JSONModel
+@interface DYAMarvelResponse : DYAMarvelModel
 
 @property (assign, nonatomic) NSInteger code;
 @property (strong, nonatomic) NSString *status;

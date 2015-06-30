@@ -6,9 +6,12 @@
 //
 //
 
-#import <JSONModel/JSONModel.h>
+#import "DYAMarvelModel.h"
 
-@interface DYAMarvelImage : JSONModel
+@protocol DYAMarvelImage
+@end
+
+@interface DYAMarvelImage : DYAMarvelModel
 
 @property (strong, nonatomic) NSString *path;
 @property (strong, nonatomic) NSString *extension;

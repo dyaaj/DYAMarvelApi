@@ -6,8 +6,15 @@
 //
 //
 
-#import <DYAMarvelApi/DYAMarvelApi.h>
+#import "DYAMarvelModel.h"
+
+@protocol DYAMarvelCreatorSummary
+@end
 
 @interface DYAMarvelCreatorSummary : DYAMarvelModel
+
+@property (strong, nonatomic) NSString *resourceURI;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *role;
 
 @end

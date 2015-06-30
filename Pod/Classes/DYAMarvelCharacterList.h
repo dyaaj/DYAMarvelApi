@@ -6,8 +6,15 @@
 //
 //
 
-#import <DYAMarvelApi/DYAMarvelApi.h>
+#import "DYAMarvelModel.h"
+
+#import "DYAMarvelCharacterSummary.h"
 
 @interface DYAMarvelCharacterList : DYAMarvelModel
+
+@property (assign, nonatomic) NSInteger available;
+@property (assign, nonatomic) NSInteger returned;
+@property (strong, nonatomic) NSString *collectionURI;
+@property (strong, nonatomic) NSArray<DYAMarvelCharacterSummary> *items;
 
 @end

@@ -6,8 +6,14 @@
 //
 //
 
-#import <DYAMarvelApi/DYAMarvelApi.h>
+#import "DYAMarvelModel.h"
+
+@protocol DYAMarvelComicDate
+@end
 
 @interface DYAMarvelComicDate : DYAMarvelModel
+
+@property (strong, nonatomic) NSString *type;
+@property (strong, nonatomic) NSDate *date;
 
 @end

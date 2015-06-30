@@ -10,4 +10,8 @@
 
 @implementation DYAMarvelComic
 
++ (JSONKeyMapper *)keyMapper {
+	return [[JSONKeyMapper alloc] initWithDictionary:@{@"id" : @"identifier", @"description" : @"shortDescription"}];
+}
+
 @end

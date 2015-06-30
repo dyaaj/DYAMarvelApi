@@ -6,10 +6,9 @@
 //
 //
 
-#import <Foundation/Foundation.h>
-#import <JSONModel/JSONModel.h>
+#import "DYAMarvelModel.h"
 
-@interface DYAMarvelDataContainer : JSONModel
+@interface DYAMarvelDataContainer : DYAMarvelModel
 
 @property (assign, nonatomic) NSInteger offset;
 @property (assign, nonatomic) NSInteger limit;

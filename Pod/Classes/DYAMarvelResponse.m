@@ -42,7 +42,7 @@
             break;
         case DYAMarvelRequestTypeComic:
         {
-            NSLog(@"request type to implement");
+			returnClass = NSClassFromString(@"DYAMarvelComicDataContainer");
         }
             break;
         case DYAMarvelRequestTypeCreator:

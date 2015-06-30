@@ -19,5 +19,6 @@
 + (instancetype)sharedApi;
 
 - (void)getCharacterWithId:(NSString *)characterId success:(void (^)(DYAMarvelResponse *response))success failure:(void(^)(NSError *error))failure;
+- (void)getComicsForCharacterWithId:(NSString *)characterId success:(void (^)(DYAMarvelResponse *response))success failure:(void (^)(NSError *error))failure;
 
 @end

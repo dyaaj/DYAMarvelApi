@@ -6,12 +6,12 @@
 //
 //
 
-#import <JSONModel/JSONModel.h>
+#import "DYAMarvelModel.h"
 
 @protocol DYAMarvelEventSummary
 @end
 
-@interface DYAMarvelEventSummary : JSONModel
+@interface DYAMarvelEventSummary : DYAMarvelModel
 
 @property (strong, nonatomic) NSString *resourceURI;
 @property (strong, nonatomic) NSString *name;
