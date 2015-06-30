@@ -37,6 +37,12 @@
     } failure:^(NSError *error) {
         NSLog(@"failed...");
     }];
+	
+	[[DYAMarvelApi sharedApi] getComicsForCharacterWithId:@"1011334" success:^(DYAMarvelResponse *response) {
+		NSLog(@"success : %@", response);
+	} failure:^(NSError *error) {
+		NSLog(@"failed...");
+	}];
 }
 
 - (void)didReceiveMemoryWarning
